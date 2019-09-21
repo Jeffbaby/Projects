@@ -14,7 +14,7 @@ def get_one_chapter(url):
         f.write("\n\n")
         for line in content:
             f.write(line)
-        print(title,"1下载完成")
+        print(title,"下载完成")
 
 
 response = requests.get('http://www.biquge.se/24901/')
