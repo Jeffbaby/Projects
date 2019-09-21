@@ -1,0 +1,9 @@
+2018-11-01 09:32:24 start reset logsvr 
+2018-11-01 09:32:24 end reset logsvr 
+
+2018-11-01 09:32:24 start reset logsvr 
+2018-11-01 09:32:24 end reset logsvr 
+
+I am a good boy.
+You are a bad boy.
+I like you.
