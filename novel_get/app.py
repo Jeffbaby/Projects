@@ -14,7 +14,7 @@ def get_one_chapter(url):
         f.write("\n\n")
         for line in content:
             f.write(line)
-        print(title,"下载完成")
+        print(title,"1下载完成")
 
 
 response = requests.get('http://www.biquge.se/24901/')
@@ -23,8 +23,7 @@ urls = res_xpath.xpath("//*[@id='list']/dl/dd/a/@href")
 
 for i,url in enumerate(urls):
     if i>8:
-        get_one_chapter("http://www.biquge.se"+url) in list_url
-        list_url.extend("http://www.biquge.se"+url)
+        get_one_chapter("http://www.biquge.se"+url)
         print("http://www.biquge.se"+url)
     else:
         pass
