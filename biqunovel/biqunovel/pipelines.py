@@ -18,6 +18,7 @@ class BiqunovelPipeline(object):
             for line in item['content']:
                 line = line.strip()  #去掉文本前后空格
                 f.write(line)
+            f.write(item['content'].strip())
             f.write('\n\n')
         return item
 

@@ -7,15 +7,16 @@ class biqu_Spider(scrapy.spiders.Spider):
     start_urls = ["http://www.biquge.se/24901/41015693.html"]
 
     def parse(self, response):
-        items = BiqunovelItem()
+        item = BiqunovelItem()
         title = response.css("h1::text").extract_first()
         #title = response.xpath("//h1/text()").extract()
-        content = response.css("#content::text").extract()
         
-        items['title'] = title
-        items['content'] = content
+        content = response.css("#content::text").extract()
 
-        yield items
+        item['title'] = title
+        item['content'] = content
+
+        yield item
 
         
 
