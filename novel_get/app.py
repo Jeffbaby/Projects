@@ -23,7 +23,7 @@ response = requests.get('http://www.biquge.se/24901/')
 res_xpath = etree.HTML(response.text)
 urls = res_xpath.xpath("//*[@id='list']/dl/dd/a/@href")
 for i,url in enumerate(urls):
-    if i>8:
+    if i>159:
         get_one_chapter("http://www.biquge.se"+url)
         print("http://www.biquge.se"+url)
     else:
