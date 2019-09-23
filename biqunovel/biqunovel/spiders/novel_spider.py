@@ -8,8 +8,8 @@ class biqu_Spider(scrapy.spiders.Spider):
 
     def parse(self, response):
         items = BiqunovelItem()
-        title = response.css("h1::text").extract()
-        title = response.xpath("//h1/text()").extract()
+        title = response.css("h1::text").extract_first()
+        #title = response.xpath("//h1/text()").extract()
         content = response.css("#content::text").extract()
         
         items['title'] = title
