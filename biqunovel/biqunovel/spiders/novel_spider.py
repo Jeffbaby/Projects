@@ -10,15 +10,11 @@ class biqu_Spider(scrapy.spiders.Spider):
         item = BiqunovelItem()
         title = response.css("h1::text").extract_first()
         #title = response.xpath("//h1/text()").extract()
-        
-        content = response.css("#content::text").extract()
-
+        content = str(''.join(response.css("#content::text").extract())).strip()
+        print(content)
         item['title'] = title
         item['content'] = content
-
         yield item
-
-        
 
         next = response.css("div.bottem2 a").xpath("@href").extract()[3]
         if next is not None:

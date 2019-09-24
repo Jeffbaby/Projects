@@ -15,10 +15,13 @@ class BiqunovelPipeline(object):
         filename = 'jueshizhanshen.txt'
         with open(filename, 'a+') as f:
             f.write(item['title'].strip() + '\n')
+            '''
             for line in item['content']:
                 line = line.strip()  #去掉文本前后空格
                 f.write(line)
             f.write(item['content'].strip())
+            '''
+            f.write(item['content'])
             f.write('\n\n')
         return item
 
